@@ -105,7 +105,21 @@ Player.prototype.update = function(){
             this.x-= 100
          }
 
+    //Update Score Value
     document.getElementById('score').value = score;
+
+    // Detect collision with enemies
+    // add padding around player and enemy location to fit images
+    // if those locations intersect reset payer to starting point
+    for(var enemy in allEnemies){
+        if (
+            player.y + 131 >= allEnemies[enemy].y + 90
+            && player.x + 25 <= allEnemies[enemy].x + 88
+            && player.y + 73 <= allEnemies[enemy].y + 135
+            && player.x + 76 >= allEnemies[enemy].x + 11) {
+            player.reset();
+        }
+    }
 };
 
 // reset player position to same as starting point
