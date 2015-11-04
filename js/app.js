@@ -22,7 +22,7 @@ Enemy.prototype.update = function(dt) {
     // if enemy x location is less than canvas length:
         // add 200 to x value multiplied by supplied time delta(dt)
     // else:
-        // set enemy x value to -100
+        // set enemy x value to -100(reset to other side of screen)
     if(this.x<505){
     this.x+=(200*dt);
     }
@@ -51,6 +51,9 @@ var Player=function(x,y){
     this.y=y;
 };
 
+// Draw the player on the screen, required method for game
+Player.prototype.render = function() {
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 
 
 // Now instantiate your objects.
