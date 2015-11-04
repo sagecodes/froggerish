@@ -11,7 +11,7 @@ extra features added:
 download/clone the repository and open the index.html file in your favorite browser.
 
 ## game instructions:
-* to Score: Move the player accross the screan to try and reach the water
+* to Score: Move the player across the screen with arrow keys to try and reach the water.
 * if you get hit by a giant bug you will die and a counter will be added to the "death" tracker.
 
 
@@ -22,7 +22,7 @@ download/clone the repository and open the index.html file in your favorite brow
 
 [update JS value: - stack overflow](http://stackoverflow.com/questions/7764154/pass-a-javascript-variable-value-into-input-type-hidden-value)
 
-[keyboard movment in Js - eloquentjs] (http://eloquentjavascript.net/15_game.html)
+[keyboard movment in Js - eloquentjs](http://eloquentjavascript.net/15_game.html)
 
 frontend-nanodegree-arcade-game
 ===============================
