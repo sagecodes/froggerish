@@ -7,6 +7,7 @@ var Enemy = function(x,y) {
     // a helper we've provided to easily load images
     this.sprite = 'images/enemy-bug.png';
 
+    // Set Enemy x & y values to equal values passed in receptively.
     this.x=x;
     this.y=y;
 };
@@ -17,6 +18,17 @@ Enemy.prototype.update = function(dt) {
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
+
+    // if enemy x location is less than canvas length:
+        // add 200 to x value multiplied by supplied time delta(dt)
+    // else:
+        // set enemy x value to -100
+    if(this.x<505){
+    this.x+=(200*dt);
+    }
+    else{
+    this.x=-100;
+    }
 };
 
 // Draw the enemy on the screen, required method for game
