@@ -40,6 +40,18 @@ Enemy.prototype.render = function() {
 // This class requires an update(), render() and
 // a handleInput() method.
 
+// Player class which the user controls
+var Player=function(x,y){
+
+    // The image/sprite for our player, this uses
+    // a helper Udacity provided to easily load images
+    this.sprite = 'images/char-boy.png';
+    // Set Player x & y values to equal values passed in receptively.
+    this.x=x;
+    this.y=y;
+};
+
+
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
