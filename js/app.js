@@ -90,6 +90,7 @@ Player.prototype.update = function(){
     // if player reaches the water reset player to starting point
     if(this.y < 1){
         player.reset();
+        score += 1;
     }
     // Stop player from moving down when at bottom of canvas
     else if(this.y > 400){
@@ -103,8 +104,6 @@ Player.prototype.update = function(){
     else if(this.x > 400){
             this.x-= 100
          }
-
-
 };
 
 // reset player position to same as starting point
@@ -129,6 +128,8 @@ var player = new Player(200, 400);
 
 // place all enemies in array
 var allEnemies=[enemy,enemy2,enemy3];
+
+var score = 0;
 
 
 
