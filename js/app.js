@@ -89,7 +89,7 @@ Player.prototype.update = function(){
 
     // if player reaches the water reset player to starting point
     if(this.y < 1){
-        player.reset();
+        this.reset();
         score += 1;
     }
     // Stop player from moving down when at bottom of canvas
@@ -110,11 +110,11 @@ Player.prototype.update = function(){
     // if those locations intersect reset payer to starting point
     for(var enemy in allEnemies){
         if (
-            player.y + 130 >= allEnemies[enemy].y + 95
-            && player.x + 25 <= allEnemies[enemy].x + 85
-            && player.y + 75 <= allEnemies[enemy].y + 135
-            && player.x + 75 >= allEnemies[enemy].x + 15) {
-            player.reset();
+            this.y + 130 >= allEnemies[enemy].y + 95
+            && this.x + 25 <= allEnemies[enemy].x + 85
+            && this.y + 75 <= allEnemies[enemy].y + 135
+            && this.x + 75 >= allEnemies[enemy].x + 15) {
+            this.reset();
             deaths += 1;
         }
     }
