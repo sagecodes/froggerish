@@ -70,7 +70,7 @@ Player.prototype.handleInput = function(key){
     }
 
     else if(key== 'up'){
-        this.y-= 100;
+        this.y-= 85;
     }
 
     else if(key == 'right'){
@@ -78,12 +78,22 @@ Player.prototype.handleInput = function(key){
     }
 
     else if(key == 'down'){
-        this.y+= 100;
+        this.y+= 85;
     }
+
+    // get x and y value for play to use for debugging move limit
+    console.log(this.x,this.y);
 };
 
 Player.prototype.update = function(){
 
+};
+
+// reset player position to same as starting point
+// used for collision or making it to water
+Player.prototype.reset= function(){
+    this.x=200;
+    this.y=400;
 };
 
 
