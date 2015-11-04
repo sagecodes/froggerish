@@ -86,12 +86,12 @@ Player.prototype.update = function(){
 // Place the player object in a variable called player
 
 // Declare 3 enemies with hardcoded x&y values *For now*
-var enemy = new Enemy(-300,300);
-var enemy2 = new Enemy(-200,200);
-var enemy3 = new Enemy(-100,100);
+var enemy = new Enemy(-30,220);
+var enemy2 = new Enemy(-200,145);
+var enemy3 = new Enemy(-100,50);
 
 // Declare player and set harded coded location *for now*
-var player = new Player(100, 100);
+var player = new Player(200, 400);
 
 // place all enemies in array
 var allEnemies=[enemy,enemy2,enemy3];
