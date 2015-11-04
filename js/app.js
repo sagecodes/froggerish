@@ -87,6 +87,13 @@ Player.prototype.handleInput = function(key){
 
 Player.prototype.update = function(){
 
+    // if player reaches the water reset player to starting point
+    if(this.y < 1){
+        player.reset();
+    }
+
+
+
 };
 
 // reset player position to same as starting point
