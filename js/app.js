@@ -91,7 +91,18 @@ Player.prototype.update = function(){
     if(this.y < 1){
         player.reset();
     }
-
+    // Stop player from moving down when at bottom of canvas
+    else if(this.y > 400){
+            this.y-= 85
+         }
+    // Stop player from moving left when at left end of canvas
+    else if(this.x < 0){
+            this.x+= 100
+         }
+    // Stop player from moving Right when at Right end of canvas
+    else if(this.x > 400){
+            this.x-= 100
+         }
 
 
 };
