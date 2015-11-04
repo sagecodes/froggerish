@@ -1,3 +1,14 @@
 body {
     text-align: center;
 }
+
+#score {
+    position:absolute;
+    top:0;
+    margin-top: 40px;
+    border:none;
+}
+
+#scoretext {
+    top:0;
+}

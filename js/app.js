@@ -104,6 +104,8 @@ Player.prototype.update = function(){
     else if(this.x > 400){
             this.x-= 100
          }
+
+    document.getElementById('score').value = score;
 };
 
 // reset player position to same as starting point
