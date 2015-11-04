@@ -1,3 +1,4 @@
+"use strict";
 // Enemies our player must avoid
 var Enemy = function(x,y) {
     // Variables applied to each of our instances go here,
@@ -54,7 +55,9 @@ var Player=function(x,y){
 // Draw the player on the screen, required method for game
 Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+};
 
+// Set action for each arrow key pressed to move player on canvas accordingly
 Player.prototype.handleInput = function(key){
     if(key =='left'){
         this.x -= 100;
@@ -73,10 +76,25 @@ Player.prototype.handleInput = function(key){
     }
 };
 
+Player.prototype.update = function(){
+
+};
+
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
+
+// Declare 3 enemies with hardcoded x&y values *For now*
+var enemy = new Enemy(-300,300);
+var enemy2 = new Enemy(-200,200);
+var enemy3 = new Enemy(-100,100);
+
+// Declare player and set harded coded location *for now*
+var player = new Player(100, 100);
+
+// place all enemies in array
+var allEnemies=[enemy,enemy2,enemy3];
 
 
 
