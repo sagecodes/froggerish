@@ -2,13 +2,21 @@ body {
     text-align: center;
 }
 
-#score {
+#scoretext {
     position:absolute;
     top:0;
     margin-top: 40px;
+
+}
+
+#deathstext {
+    position:absolute;
+    top:0;
+    margin-top: 80px;
     border:none;
 }
 
-#scoretext {
-    top:0;
+#score, #deaths {
+    border:none;
 }
+
