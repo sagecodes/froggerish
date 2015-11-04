@@ -43,10 +43,16 @@ Enemy.prototype.render = function() {
 
 // Player class which the user controls
 var Player=function(x,y){
+    // Create array containing each char image
+    var sprites = Array('images/char-cat-girl.png', 'images/char-horn-girl.png',
+                        'images/char-pink-girl.png','images/char-boy.png',
+                        'images/char-princess-girl.png');
 
     // The image/sprite for our player, this uses
     // a helper Udacity provided to easily load images
-    this.sprite = 'images/char-boy.png';
+    // picks random image from sprites array
+    this.sprite = sprites[Math.floor(Math.random()*sprites.length)];
+
     // Set Player x & y values to equal values passed in receptively.
     this.x=x;
     this.y=y;
