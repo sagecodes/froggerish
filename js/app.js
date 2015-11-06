@@ -44,9 +44,13 @@ Enemy.prototype.render = function() {
 // Player class which the user controls
 var Player=function(x,y){
     // Create array containing each char image
-    var sprites = Array('images/char-cat-girl.png', 'images/char-horn-girl.png',
-                        'images/char-pink-girl.png','images/char-boy.png',
-                        'images/char-princess-girl.png');
+    var sprites = [
+        'images/char-cat-girl.png',
+        'images/char-horn-girl.png',
+        'images/char-pink-girl.png',
+        'images/char-boy.png',
+        'images/char-princess-girl.png'
+        ];
 
     // The image/sprite for our player, this uses
     // a helper Udacity provided to easily load images
