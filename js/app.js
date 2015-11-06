@@ -54,8 +54,8 @@ var Player=function(x,y){
     this.sprite = sprites[Math.floor(Math.random()*sprites.length)];
 
     // Set Player x & y values to equal values passed in receptively.
-    this.x=x;
-    this.y=y;
+    this.x = x;
+    this.y = y;
 };
 
 // Draw the player on the screen, required method for game
@@ -69,8 +69,8 @@ Player.prototype.handleInput = function(key){
         this.x -= 100;
     }
 
-    else if(key== 'up'){
-        this.y-= 85;
+    else if(key == 'up'){
+        this.y -= 85;
     }
 
     else if(key == 'right'){
@@ -78,7 +78,7 @@ Player.prototype.handleInput = function(key){
     }
 
     else if(key == 'down'){
-        this.y+= 85;
+        this.y += 85;
     }
 
     // get x and y value for play to use for debugging move limit
@@ -94,15 +94,15 @@ Player.prototype.update = function(){
     }
     // Stop player from moving down when at bottom of canvas
     else if(this.y > 400){
-            this.y-= 85;
+            this.y -= 85;
          }
     // Stop player from moving left when at left end of canvas
     else if(this.x < 0){
-            this.x+= 100;
+            this.x += 100;
          }
     // Stop player from moving Right when at Right end of canvas
     else if(this.x > 400){
-            this.x-= 100;
+            this.x -= 100;
          }
 
     // Detect collision with enemies
@@ -110,10 +110,10 @@ Player.prototype.update = function(){
     // if those locations intersect reset payer to starting point
     for(var enemy in allEnemies){
         if (
-            this.y + 130 >= allEnemies[enemy].y + 95
-            && this.x + 25 <= allEnemies[enemy].x + 85
-            && this.y + 75 <= allEnemies[enemy].y + 135
-            && this.x + 75 >= allEnemies[enemy].x + 15) {
+            this.y + 130 >= allEnemies[enemy].y + 95 &&
+            this.x + 25 <= allEnemies[enemy].x + 85  &&
+            this.y + 75 <= allEnemies[enemy].y + 135 &&
+            this.x + 75 >= allEnemies[enemy].x + 15) {
             this.reset();
             deaths += 1;
         }
@@ -128,8 +128,8 @@ Player.prototype.update = function(){
 // reset player position to same as starting point
 // used for collision or making it to water
 Player.prototype.reset= function(){
-    this.x=200;
-    this.y=400;
+    this.x = 200;
+    this.y = 400;
 };
 
 
