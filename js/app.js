@@ -15,15 +15,18 @@ var Enemy = function(x,y) {
 // Parameter: dt, a time delta between ticks
 Enemy.prototype.update = function(dt) {
 
+    //Create random number to make enemy time different when coming back
+    var xstart = Math.floor((Math.random() * -500) + -100);
+
     // if enemy x location is less than canvas length:
         // add 200 to x value multiplied by supplied time delta(dt)
     // else:
         // set enemy x value to -100(reset to other side of screen)
-    if(this.x<505){
-    this.x+=(200*dt);
+    if(this.x < 505){
+    this.x += (200 * dt + score);
     }
     else{
-    this.x=-100;
+    this.x=xstart;
     }
 };
 
@@ -129,7 +132,9 @@ Player.prototype.reset= function(){
 
 
 // Declare 3 enemies with hardcoded x&y values *For now*
-var enemy = new Enemy(-30,220);
+
+
+var enemy = new Enemy(-300,220);
 var enemy2 = new Enemy(-200,145);
 var enemy3 = new Enemy(-100,50);
 
@@ -142,6 +147,8 @@ var allEnemies=[enemy,enemy2,enemy3];
 var score = 0;
 var deaths = 0;
 
+
+console.log(xstart);
 
 
 // This listens for key presses and sends the keys to your
