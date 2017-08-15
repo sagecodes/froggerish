@@ -8,7 +8,7 @@ extra features added:
 * keeps track of "deaths"
 
 ## Instructions for running:
-[Play online!](http://sageio.github.io/froggerish/)
+[Play online!](http://sagecodes.github.io/froggerish/)
 download/clone the repository and open the index.html file in your favorite browser.
 
 ## game instructions:
